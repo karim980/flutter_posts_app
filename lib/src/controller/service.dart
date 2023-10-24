@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 import '../../core/error/exceptions.dart';
 import '../model/post_model.dart';
@@ -31,6 +32,7 @@ class ApiService {
     );
 
     if (response.statusCode == 201) {
+      debugPrint(response.body);
       return Post.fromJson(jsonDecode(response.body));
     } else {
       throw Exception('Failed to create post.');
