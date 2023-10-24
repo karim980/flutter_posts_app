@@ -5,12 +5,10 @@ import 'package:flutter_posts_app/src/view/screens/login_screen.dart';
 import 'package:flutter_posts_app/src/view/screens/posts_screen.dart';
 import 'package:flutter_posts_app/src/view/screens/add_post_screen.dart';
 import 'package:flutter_posts_app/src/view/screens/register_screen.dart';
-import 'package:flutter_posts_app/src/view/widgets/active_bar_widget.dart';
 import 'package:get/get.dart';
 
 void main() {
   runApp(MyApp());
-  Get.lazyPut(()=>PostController());
 }
 
 class MyApp extends StatelessWidget {

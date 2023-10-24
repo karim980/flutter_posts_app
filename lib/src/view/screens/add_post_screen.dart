@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_posts_app/core/colors/app_color.dart';
 import 'package:get/get.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import '../../controller/service.dart';
+import 'package:flutter_posts_app/core/util/snackbar_message.dart';
+import 'package:flutter_posts_app/core/strings/messages.dart';
+import 'package:flutter_posts_app/core/strings/failures.dart';
 
 class CreatePostScreen extends StatelessWidget {
   final TextEditingController titleController = TextEditingController();
@@ -32,10 +36,10 @@ class CreatePostScreen extends StatelessWidget {
                 var body = bodyController.text;
                 var newPost = await ApiService().createPost(title, body, 1);
 
-                if(newPost != null){
-                  Get.snackbar('', 'body send successfully',backgroundColor: AppColors.mainColor);
+                if(newPost != null) {
+                  SnackBarMessage().showSuccessSnackBar(message: ADD_SUCCESS_MESSAGE, context: context);
                 }else{
-                Get.snackbar('', 'error',backgroundColor: AppColors.mainColor);
+                SnackBarMessage().showErrorSnackBar(message: SERVER_FAILURE_MESSAGE, context: context);
                 }
               },
             ),
