@@ -6,22 +6,26 @@ final primaryColor = Color(0xff082659);
 final secondaryColor = Color(0xffde890c);
 
 final appTheme = ThemeData(
-  scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: Colors.white,
     appBarTheme: AppBarTheme(
       backgroundColor: primaryColor,
       centerTitle: true,
     ),
     iconTheme: IconThemeData(color: Colors.grey[700]),
     textTheme: TextTheme(
-      headline1: TextStyle(color: AppColors.whiteColor,fontSize: 27,fontWeight: FontWeight.w600),
-      headline2: TextStyle(color: AppColors.whiteColor,fontSize: 20,fontWeight: FontWeight.w200),
-      bodyText1: TextStyle(color: AppColors.yllColor,fontWeight: FontWeight.w300,fontSize: 12),
-      bodyText2: TextStyle(color: AppColors.whiteColor,fontWeight: FontWeight.w300,fontSize: 12),
-      subtitle1: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: AppColors.backColor),
+      headline1: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+      headline2: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+      bodyText1: TextStyle(
+          color: AppColors.yllColor, fontWeight: FontWeight.w300, fontSize: 12),
+      bodyText2: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+      subtitle1: TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.w400,
+          color: AppColors.backColor),
     ),
-    elevatedButtonTheme: ElevatedButtonThemeData(style: ButtonStyle(
-      backgroundColor: MaterialStatePropertyAll(primaryColor)
-    )),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+            backgroundColor: MaterialStatePropertyAll(primaryColor))),
     brightness: Brightness.light,
     primaryColor: primaryColor,
     colorScheme: ColorScheme.light(
