@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:get/get.dart';
 
 import '../widgets/form_field_widget.dart';
 
@@ -66,7 +67,7 @@ class RegisterScreen extends StatelessWidget {
                     child: Text('Register'),
                     onPressed: () {
                       if (_formKey.currentState!.saveAndValidate()) {
-                        print(_formKey.currentState!.value);
+                        Get.back();
                       }
                     },
                   ),

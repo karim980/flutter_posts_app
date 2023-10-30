@@ -46,8 +46,7 @@ class CreatePostScreen extends StatelessWidget {
                 var title = titleController.text;
                 var body = bodyController.text;
                 var newPost = await ApiService().createPost(title, body, 1);
-
-                if (newPost != null) {
+                if (newPost.title == title) {
                   SnackBarMessage().showSuccessSnackBar(
                       message: ADD_SUCCESS_MESSAGE, context: context);
                   Get.back();

@@ -30,7 +30,6 @@ class ApiService {
         'userId': userId,
       }),
     );
-
     if (response.statusCode == 201) {
       debugPrint(response.body);
       return Post.fromJson(jsonDecode(response.body));
