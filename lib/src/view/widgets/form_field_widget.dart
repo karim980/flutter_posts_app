@@ -7,6 +7,7 @@ class FormFieldWidget extends StatelessWidget {
   bool boolval;
   IconData ?suffixIcon;
   IconData prefixIcon;
+  TextEditingController? controller;
 
   FormFieldWidget({
     super.key,
@@ -15,12 +16,14 @@ class FormFieldWidget extends StatelessWidget {
     required this.boolval,
     this.suffixIcon,
     required this.prefixIcon,
+    this.controller,
   });
 
   @override
   Widget build(BuildContext context) {
     return FormBuilderTextField(
       name: name,
+      controller: controller ,
       decoration: InputDecoration(
         labelText: lable,
         suffixIcon: Icon(suffixIcon),

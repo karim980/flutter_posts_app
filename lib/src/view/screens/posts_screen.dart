@@ -3,8 +3,6 @@ import 'package:flutter_posts_app/core/colors/app_color.dart';
 import 'package:flutter_posts_app/src/view/screens/add_post_screen.dart';
 import 'package:flutter_posts_app/src/view/screens/details_screen.dart';
 import 'package:get/get.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
-import '../../../core/strings/failures.dart';
 import '../../controller/post_controller.dart';
 import '../widgets/active_bar_widget.dart';
 
@@ -22,7 +20,6 @@ class PostsScreen extends StatelessWidget {
         if (Get.find<PostController>().isLoading.value) {
           return const Center(child: CircularProgressIndicator());
         }
-
         else {
           return ListView.separated(
             physics: const BouncingScrollPhysics(),
